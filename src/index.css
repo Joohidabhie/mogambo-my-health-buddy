@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-bg-primary: #F5F2ED;
+  --color-bg-secondary: #EBE8E3;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #6B6B6E;
+  --color-accent: #FF6321;
+  --color-accent-light: #F27D26;
+  --color-highlight: #F27D26;
+  
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-3xl: 48px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-xl border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] rounded-[2rem];
+}
+
+.glass-card-dark {
+  @apply bg-black/80 backdrop-blur-xl border border-white/10 shadow-2xl rounded-[2rem] text-white;
+}
+
+.pill-button {
+  @apply px-10 py-4 rounded-full font-bold transition-all duration-300 active:scale-95 flex items-center justify-center gap-2;
+}
+
+.pill-button-primary {
+  @apply px-10 py-4 rounded-full font-bold transition-all duration-300 active:scale-95 bg-gradient-to-br from-accent to-accent-light text-white hover:shadow-[0_15px_30px_-5px_rgba(255,99,33,0.4)] flex items-center justify-center gap-2;
+}
+
+.orange-ombre {
+  @apply bg-gradient-to-br from-accent to-accent-light;
+}
+
+.bg-ombre-soft {
+  @apply bg-gradient-to-br from-[#F5F2ED] via-[#F5F2ED] to-[#FF6321]/10;
+}
+
+.text-ombre {
+  @apply bg-gradient-to-br from-accent to-accent-light bg-clip-text text-transparent;
+}
+
+.pill-button-secondary {
+  @apply px-10 py-4 rounded-full font-bold transition-all duration-300 active:scale-95 bg-white/40 backdrop-blur-md text-text-primary border border-white/40 hover:bg-white/60 flex items-center justify-center gap-2;
+}
+
+.glass-input {
+  @apply bg-white/40 backdrop-blur-md border border-white/30 rounded-full px-6 py-4 focus:outline-none focus:ring-2 focus:ring-accent/50 transition-all;
+}

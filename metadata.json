@@ -1,0 +1,8 @@
+{
+  "name": "MY health buddy",
+  "description": "A family-focused nutrition intelligence platform designed to simplify everyday food decisions for modern urban households.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
